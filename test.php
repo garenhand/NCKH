@@ -7,4 +7,8 @@ $result=$objDb->select('monhoc', $where);
 foreach ($result as $value) {
     echo $value['ten']."<br>";
 }
+<<<<<<< HEAD
 echo "ABC";
+=======
+echo "string";
+>>>>>>> parent of 113df7b... test2
