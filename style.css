@@ -1,0 +1,96 @@
+*{
+	padding: 0px;
+	margin: 0px;
+	font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+	background: #c1c8dd url(img/bg-body.png) repeat-x 0 -5px;
+}
+.container{
+	background: #fff;
+}
+.navbar{
+	background: none;
+	border:none;
+}
+#header img{
+	width: 100%;
+}
+#header{
+	padding: 0px;
+	position: relative;
+}
+#header ul{
+	position: absolute;
+	top:5px;
+	right: 20px;
+}
+#navbar{
+	margin-bottom: 0px!important;
+	height: 35px;
+	background: #0f297e url(img/menubg.png) repeat-x;
+    color: #fff;
+}
+#navbar a{
+	padding: 7px;
+	color: #fff;
+}
+.navbar{
+	min-height: auto;
+	margin-bottom: 0px;
+}
+.home{
+	text-indent: -1000px;
+	background: url('img/home.png') no-repeat;
+	background-position: 50% 30%;
+}
+.navbar-toggle{
+	margin: 3px;
+	padding: 6px;
+}
+@media screen and (max-width: 768px) {
+	#navmenu{
+		position: relative;
+		z-index: 999999;
+		background: #0f297e!important;
+	}
+	.navbar-nav{
+		margin-top: -2px!important;
+	}
+	.home{
+		background-position: 2% 60%;
+	}
+}
+.title{
+	font-size: 30px;
+	text-transform: uppercase;
+	text-align: center!important;
+	font-weight: bold;
+    text-transform: uppercase;
+    line-height: 30px;
+    margin-bottom: 25px;
+    text-align: left;
+    color: #333;
+    padding-left: 10px;
+}
+#content input[type="text"],input[type="password"]{
+	border-radius: 0px;
+}
+#content th{
+	background: #2980b9;
+	color: #fff;
+}
+.link{
+	color: #102a7f;
+    right: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    text-shadow: 0px 1px 1px #FFF, 1px 1px 1px #FFF, 1px -1px 1px #FFF, -1px -1px 1px #FFF;
+}
+table th{
+	text-align: center;
+}
+table tr td:ntn-child(8){
+	text-align: center;
+}
