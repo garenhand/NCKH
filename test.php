@@ -7,3 +7,4 @@ $result=$objDb->select('monhoc', $where);
 foreach ($result as $value) {
     echo $value['ten']."<br>";
 }
+echo "string";
