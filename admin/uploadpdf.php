@@ -1,5 +1,12 @@
 <?php
-   
+include_once '../template/_header.php';
+if (!isset($_SESSION['id'])) {
+    header('location:'.siteurl.'login.php');
+}else {
+    if ($_SESSION['type']!=1) {
+        header('location:'.siteurl.'template/permission.php');
+    }
+}  
     $hasuploaded=0;
     $error=array();
 
@@ -50,7 +57,6 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
         }
     }
 }
-include '../template/_header.php';
 ?>
 <script>
     function count() {
