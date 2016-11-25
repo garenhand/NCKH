@@ -4,77 +4,6 @@
 	font-size: 12px;
     font-family: 'Roboto', sans-serif;
 }
-
-span.label.label-success {
-    font-size: 17px;
-}
-
-p {
-    padding-bottom: 0px!important;
-    font-size: 15px!important;
-}
-
-span.label.label-success {
-    padding: 3px 10px;
-}
-
-b {
-    font-weight: bold;
-    font-size: 25px;
-}
-
-p {
-    padding-bottom: 15px;
-}
-
-button.btn.btn-danger {
-    border-radius: 0px;
-    padding-left: 25px;
-    padding-right: 25px;
-}
-
-p {
-    
-    font-size: 20px;
-}
-
-
-button.btn.btn-success {
-    padding-left: 25px;
-    padding-right: 55px;
-}
-
-label {
-    padding-top: 10px;
-}
-
-button.btn.btn-success {
-    width: 60px;
-}
-
-button.btn.btn-default {}
-
-button.btn.btn-success {
-    border-radius: 0px;
-}
-
-button.btn.btn-default {
-    border-radius: 0px;
-}
-
-button.close {}
-
-button.close {
-    /* color: red; */
-}
-
-h4.modal-title {
-    color: white;
-}
-
-.modal-header {
-    background: #2980b9;
-}
 body{
 	background: #c1c8dd url(img/bg-body.png) repeat-x 0 -5px;
 }
@@ -220,7 +149,4 @@ table tr td:ntn-child(8){
 #table_search:focus{
 	width: 300%;
 
-}
-.table-responsive table,tr,td{
-	border-top: none!important;
 }

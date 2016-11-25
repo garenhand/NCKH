@@ -207,30 +207,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         
                         <form action="" onsubmit="return saveMonHoc();;" method="" role="form">
 
-                        <div class="modal-body">
-                            <div class="row">
-                                <div class="col-md-8 col-md-push-2">
-                                    <div class="table-responsive">
-                                        <table class="table">
-                                           
-                                            <tbody>
-                                                <tr>
-                                                    <td><label for="">Mã môn</label></td>
-                                                    <td><input id="ma" type="text" class="form-control" id="" placeholder="" required="true"></td>
-                                                </tr> 
-                                                <tr>
-                                                    <td><label for="">Tên môn</label></td>
-                                                    <td><input id="ten" type="text" class="form-control" id="" placeholder="" required="true"></td>
-                                                </tr> 
-                                                <tr>
-                                                    <td><label for="">Số tín chỉ</label></td>
-                                                    <td><input id="sotinchi" type="number" class="form-control" id="" placeholder="" required="true"></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
+                            <div class="modal-body">
+
+                                <div class="form-group">
+                                    <label for="">Mã môn</label>
+                                    <input id="ma" type="text" class="form-control" id="" placeholder="" required="true">
                                 </div>
+
+                                <div class="form-group">
+                                    <label for="">Tên môn</label>
+                                    <input id="ten" type="text" class="form-control" id="" placeholder="" required="true">
                                 </div>
+
+                                <div class="form-group">
+                                    <label for="">Số tín chỉ</label>
+                                    <input id="sotinchi" type="number" class="form-control" id="" placeholder="" required="true">
+                                </div>
+
+
+
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
@@ -241,15 +236,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 </div>
             </div>
             <fieldset>
-                <legend>Nhập mã hoặc tên môn học 
-                    <span class="input-group input-group-sm" style="width: 150px;">
-                        <div class="input-group-btn">
-                            <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
-                        </div>
-                            <input type="text" onkeyup="getMonHoc();" id="table_search" class="form-control pull-left" placeholder="Từ khóa">
-         
-                    </span>  
-                </legend>
+                <legend>Nhập mã hoặc tên môn học <div class="pull-right">
+                        <span class="input-group input-group-sm" style="width: 150px;">
+                            <input type="text" onkeyup="getMonHoc();" id="table_search" class="form-control pull-right" placeholder="Từ khóa">
+                            <div class="input-group-btn">
+                                <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                            </div>
+
+
+                        </span>  
+
+
+                    </div></legend>
                 
 
                 <div id="result">
