@@ -83,8 +83,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 . "OR ten LIKE '%$key%' ";
         $records = $objDb->count_num_row($sql);
         $page = ceil($records / $entry_per_page);
-        echo 'Số kết quả trả về ' . $records;
-
+          echo "<p>Số kết quả trả về <span class=\"label label-success\">$records</span></p>";
         $sql = "SELECT * FROM monhoc WHERE "
                 . "ma LIKE '%$key%' "
                 . "OR ten LIKE '%$key%' "
@@ -93,6 +92,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $result = $objDb->getlist($sql);
         if ($result) {
             ?>
+            
             <table class="table table-hover table-bordered">
                 <thead>
                     <tr>
@@ -119,7 +119,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                             <h4 class="modal-title">Xóa môn học</h4>
                                         </div>
                                         <div class="modal-body">
-                                            Bạn có muốn xóa môn : <?php echo $row['ten'] ?>
+                                            <p>Bạn có muốn xóa môn : <b><?php echo $row['ten'] ?></b></p>
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
@@ -136,22 +136,34 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                                             <h4 class="modal-title">Sửa môn học</h4>
                                         </div>
+
                                         <form action="" method="POST" role="form">
 
                                             <div class="modal-body">
-
-                                                <div class="form-group">
-                                                    <label for="">Mã Môn học</label>
-                                                    <input type="text" class="form-control" disabled="" value="<?php echo $row['ma'] ?>" id="" placeholder="Nhập mã môn học">
+                                                <div class="row">
+                                                     <div class="col-md-8 col-md-push-2">
+                                                         <div class="table-responsive">
+                                                    <table class="table">
+                                                        
+                                                        <tbody>
+                                                            <tr>
+                                                                <td><label for="">Mã Môn học</label></td>
+                                                                <td><input type="text" class="form-control" disabled="" value="<?php echo $row['ma'] ?>" id="" placeholder="Nhập mã môn học"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><label for="">Tên môn</label></td>
+                                                                <td><input type="text" class="form-control" id="uten<?php echo $row['ma'] ?>" value="<?php echo $row['ten'] ?>" id="" placeholder="Nhập tên môn học"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><label for="">Số tín chỉ</label></td>
+                                                                <td><input type="text" class="form-control" id="utinchi<?php echo $row['ma'] ?>" value="<?php echo $row['sotinchi'] ?>" id="" placeholder="Số tín chỉ"></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
                                                 </div>
-                                                <div class="form-group">
-                                                    <label for="">Tên môn</label>
-                                                    <input type="text" class="form-control" id="uten<?php echo $row['ma'] ?>" value="<?php echo $row['ten'] ?>" id="" placeholder="Nhập tên môn học">
+                                                     </div>
                                                 </div>
-                                                <div class="form-group">
-                                                    <label for="">Số tín chỉ</label>
-                                                    <input type="text" class="form-control" id="utinchi<?php echo $row['ma'] ?>" value="<?php echo $row['sotinchi'] ?>" id="" placeholder="Số tín chỉ">
-                                                </div>
+                                                
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
